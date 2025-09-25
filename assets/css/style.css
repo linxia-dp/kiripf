@@ -1,0 +1,361 @@
+/* 全体設定 */
+:root {
+    --main-color: #333;
+    --bg-color: #f9f9f9;
+    --accent-color: #5a5a5a;
+    --border-radius-lg: 20px;
+    --border-radius-sm: 10px;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--main-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+p + p {
+    margin-top: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ヘッダー */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.header__logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.header__list {
+    display: flex;
+    gap: 30px;
+}
+
+.header__link {
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.header__link:hover {
+    color: var(--accent-color);
+}
+
+/* セクション共通スタイル */
+.section__title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+section {
+    padding: 120px 0;
+}
+
+/* ファーストビュー */
+.fv {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* 背景画像 */
+    min-height: 100vh;
+    background-image: url("../../images/fv.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fv__content {
+    animation: fadeInScale 1s ease-out;
+}
+
+.fv__title {
+    font-size: 3.5rem;
+    font-weight: 600;
+    font-size: 2.5rem;
+    display: flex;
+    margin: 0 auto 10;
+    line-height: 1.65;
+}
+
+.fv__description {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 40px auto 0;
+    line-height: 2;
+}
+
+/* Worksセクション */
+.works__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.works__item {
+    display: block;
+    background-color: #fff;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.works__item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.works__image-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.works__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.works__item:hover .works__image {
+    transform: scale(1.05);
+}
+
+.works__label {
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Aboutセクション */
+.about__content {
+    background-color: #fff;
+    padding: 60px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* フッター */
+.footer {
+    text-align: center;
+    padding: 80px 0 40px;
+}
+
+.footer__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer__list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer__link {
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.footer__link:hover {
+    color: var(--accent-color);
+}
+
+.footer__copy {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+}
+
+/* 作品詳細ページ専用スタイル */
+.work-detail {
+    padding-top: 150px; /* ヘッダーの高さ分、コンテンツを下にずらす */
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 30px;
+    font-weight: 400;
+    color: var(--accent-color);
+    transition: transform 0.3s;
+}
+
+.back-link:hover {
+    transform: translateX(-5px);
+}
+
+.work-detail__title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.work-detail__category {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--accent-color);
+    margin-bottom: 40px;
+}
+
+.work-detail__main-image {
+    margin-bottom: 60px;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.work-detail__main-image img,
+.work-detail__image-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.work-detail__description,
+.work-detail__details,
+.work-detail__images,
+.work-detail__link {
+    margin-bottom: 60px;
+}
+
+.work-detail__description p,
+.work-detail__details ul li {
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.work-detail__details h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.work-detail__details > ul {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow);
+}
+
+.work-detail__details li {
+    margin-bottom: 10px;
+}
+
+.work-detail__images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-height: 360px;
+}
+
+.work-detail__image-item {
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    object-fit: cover;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.project-link:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+.fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiri N's Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__inner">
+            <h1 class="header__logo"><a href="/">Kiri N's portfolio site</a></h1>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item"><a href="#works" class="header__link">Works</a></li>
+                    <li class="header__item"><a href="#about" class="header__link">About</a></li>
+                    <li class="header__item"><a href="#contact" class="header__link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="fv">
+            <div class="fv__content">
+                <h2 class="fv__title">エンドユーザーの視点に立ち、<br>やさしさをプラスします</h2>
+                <p class="fv__description">サービスの使いやすさ、視覚的な面白さを念頭に置き、<br>クライアント視点・エンドユーザー視点から+αのデザインを提案します。</p>
+            </div>
+        </section>
+
+        <section id="works" class="works">
+            <div class="container">
+                <h2 class="section__title">Works</h2>
+                <div class="works__grid">
+                    <a href="work1.html" class="works__item fade-in">
+                        <div class="works__image-wrapper">
+                            <img src="images/work01.webp" alt="Work 1" class="works__image">
+                        </div>
+                        <p class="works__label">PDF版ポートフォリオ</p>
+                    </a>
+
+                    <a href="work2.html" class="works__item fade-in">
+                        <div class="works__image-wrapper">
+                            <img src="images/work02_01.png" alt="Work 2" class="works__image">
+                        </div>
+                        <p class="works__label">ポートフォリオサイト</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section__title">About</h2>
+                <div class="about__content fade-in">
+                    <p>
+                        Kiri Nのポートフォリオサイトです。
+                        <br>Web制作の業務経験を活かし、クライアント、エンドユーザの<br>多様なニーズに応えます。
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <p class="footer__title">Contact</p>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="https://github.com/linxia-dp" class="footer__link">GitHub</a></li>
+                </ul>
+                <p class="footer__copy">&copy; <span id="current-year"></span> Kiri N</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/func.js""></script>
+</body>
+</html>

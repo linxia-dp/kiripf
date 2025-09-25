@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオサイト | Kiri N's Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__inner">
+            <h1 class="header__logo"><a href="index.html">Kiri N's portfolio site</a></h1>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item"><a href="index.html#works" class="header__link">Works</a></li>
+                    <li class="header__item"><a href="index.html#about" class="header__link">About</a></li>
+                    <li class="header__item"><a href="index.html#contact" class="header__link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="work-detail">
+            <div class="container">
+                <a href="index.html#works" class="back-link">&larr; Back to Works</a>
+                <h2 class="work-detail__title fade-in">ポートフォリオサイト</h2>
+                <p class="work-detail__category fade-in">Category: Web Design, Development</p>
+                
+                <figure class="work-detail__main-image fade-in">
+                    <img src="images/work02_01.png" alt="Project Main Image">
+                </figure>
+                
+                <div class="work-detail__description fade-in">
+                    <p>
+                        Web媒体の成果物を掲載しています。<br>
+                        制作を機に、ローカルからGitHub経由でCloudflare Pagesでホストし、デプロイする
+                        一連の流れを習得しました。<br>
+                        カスタムドメインもCloudflareで取得しています。
+                    </p>
+                    
+                    <p>
+                        サブドメインには、自身でマークアップした <a href="https://demo-corporate.kiripf.org/">デモ企業サイト</a> を配置しています。
+                        応募フォームのバリデーション機能を独自に実装しました。
+                    </p>
+                </div>
+                
+                <div class="work-detail__details fade-in">
+                    <h3>詳細</h3>
+                    <ul>
+                        <li><strong>ジャンル:</strong> Webデザイン, コーディング</li>
+                        <li><strong>制作期間:</strong> 1日(Git/デプロイ方法の調査含む)</li>
+                        <li>
+                            <strong>使用技術:</strong> 
+                            <ul>
+                                <li>HTML5, CSS3, JavaScript</li>
+                                <li>Git, GitHub</li>
+                                <li>Cloudflare, Cloudflare Pages(ドメイン取得、ホスティング)</li>
+                            </ul>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="work-detail__images fade-in">
+                    <div class="work-detail__image-item">
+                        <img src="images/work02_02.webp" alt="Sub Image 2">
+                    </div>
+                </div>
+
+                <div class="work-detail__link fade-in">
+                    <a href="https://demo-corporate.kiripf.org/" class="project-link">Visit Site &rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <p class="footer__title">Contact</p>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="https://github.com/linxia-dp" target="_blank" class="footer__link">Github</a></li>
+            </ul>
+            <p class="footer__copy">&copy; <span id="current-year"></span> Kiri N</p>
+        </div>
+    </footer>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
